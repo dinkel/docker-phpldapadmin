@@ -5,7 +5,7 @@ MAINTAINER Christian Luginbühl <dinke@pimprecords.com>
 ENV PHPLDAPADMIN_VERSION 1.2.3
 
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
         curl \
         ldap-utils \
         php5-ldap && \
