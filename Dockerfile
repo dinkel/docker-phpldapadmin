@@ -1,4 +1,4 @@
-FROM dinkel/nginx-phpfpm:8.0
+FROM dinkel/nginx-phpfpm:8.1
 
 MAINTAINER Christian Luginbühl <dinke@pimprecords.com>
 
@@ -19,7 +19,7 @@ RUN chown -R root:root /var/www/
 
 RUN cp -R /var/www/config /var/www/default_config
 
-# In PHP 5.5 there is a new internal 'password_hash' function
+# Since PHP 5.5 there is a new internal 'password_hash' function
 RUN find /var/www/ -name "*.php" | xargs sed -i "s/password_hash/pla_password_hash/g"
 
 COPY default.conf /etc/nginx/conf.d/
