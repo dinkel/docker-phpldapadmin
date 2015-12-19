@@ -18,11 +18,11 @@ Normally the application is started like so:
 Configuration (environment variables)
 -------------------------------------
 
-    OPENLDAP_HOST (defaults to 'openldap')
+    CONFIG_LDAP_SERVER_HOST (defaults to 'openldap')
 
 sets the host of the LDAP server.
 
-    OPENLDAP_PORT (defaults to '389')
+    CONFIG_LDAP_SERVER_PORT (defaults to '389')
 
 sets the port of the LDAP server.
 
