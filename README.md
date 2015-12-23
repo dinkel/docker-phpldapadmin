@@ -18,13 +18,18 @@ Normally the application is started like so:
 Configuration (environment variables)
 -------------------------------------
 
-    CONFIG_LDAP_SERVER_HOST (defaults to 'openldap')
+    LDAP_SERVER_HOST (defaults to 'openldap')
 
 sets the host of the LDAP server.
 
-    CONFIG_LDAP_SERVER_PORT (defaults to '389')
+    LDAP_SERVER_PORT (defaults to '389')
 
 sets the port of the LDAP server.
+
+    UNIQUE_ATTRS (defaults to 'mail,uid,uidNumbers')
+    
+sets which attributes are checked for uniqueness by phpLDAPadmin (n.b. that this
+might be different to what is configured in your LDAP server).
 
 Todo / Restrictions
 -------------------
